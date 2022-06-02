@@ -1,0 +1,34 @@
+{
+    "Languages": {
+        "english": "English",
+        "chinese": "中国人"
+    },
+    "LoginScreen": {
+        "welcome":"Welcome",
+        "welcomeMessage":"Book app aims to provide variety with a quick sharing of resources among friends and family",
+        "loginNow": "Log in Now",
+        "pleaseLogin":"Please login to continue using our App",
+        "emailPlaceHolder":"Enter your email address",
+        "requiredMessage":"This is required",
+        "passwordPlaceholder":"Enter your password",
+        "forgotPassword":"Forgot Password",
+        "loginButton":"LOG IN",
+        "dontHaveAccount":"Don't have an account",
+        "sinup":"Sinup"
+    },
+    "SignUpScreen":{
+        "signup":"Sign Up",
+        "namePlaceholder":"enter your first name",
+        "secondName":"enter your last name",
+        "emailPlaceholder":"enter your email",
+        "passwordPlaceholder":"enter your password",
+        "signupButton":"SIGN UP",
+        "loginInstead":"Login instead"
+    },
+    "ForgotScreen":{
+        "forgot":"Forgot Password",
+        "enterEmail":"enter your email",
+        "submitButton":"SUBMIT",
+        "loginInstead":"Login instead"
+    }
+}

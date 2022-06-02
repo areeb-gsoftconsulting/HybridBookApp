@@ -1,0 +1,34 @@
+{
+    "Languages": {
+        "english": "English",
+        "chinese": "中国人"
+    },
+    "LoginScreen": {
+        "welcome":"欢迎",
+        "welcomeMessage":"图书应用旨在为朋友和家人提供快速共享资源的多样性",
+        "loginNow": "现在登录",
+        "pleaseLogin":"请登录以继续使用我们的应用程序",
+        "emailPlaceHolder":"输入你的电子邮箱地址",
+        "requiredMessage":"这是必需的",
+        "passwordPlaceholder":"输入您的密码",
+        "forgotPassword":"忘记密码",
+        "loginButton":"登录",
+        "dontHaveAccount":"没有帐户",
+        "sinup":"报名"
+    },
+    "SignUpScreen":{
+        "signup":"报名p",
+        "namePlaceholder":"输入您的名字",
+        "secondName":"输入您的姓氏",
+        "emailPlaceholder":"输入你的电子邮箱",
+        "passwordPlaceholder":"输入您的密码",
+        "signupButton":"报名",
+        "loginInstead":"改为登录"
+    },
+    "ForgotScreen":{
+        "forgot":"忘记密码",
+        "enterEmail":"输入你的电子邮箱",
+        "submitButton":"提交",
+        "loginInstead":"改为登录"
+    }
+}
