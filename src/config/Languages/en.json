@@ -4,31 +4,60 @@
         "chinese": "中国人"
     },
     "LoginScreen": {
-        "welcome":"Welcome",
-        "welcomeMessage":"Book app aims to provide variety with a quick sharing of resources among friends and family",
+        "welcome": "Welcome",
+        "welcomeMessage": "Book app aims to provide variety with a quick sharing of resources among friends and family",
         "loginNow": "Log in Now",
-        "pleaseLogin":"Please login to continue using our App",
-        "emailPlaceHolder":"Enter your email address",
-        "requiredMessage":"This is required",
-        "passwordPlaceholder":"Enter your password",
-        "forgotPassword":"Forgot Password",
-        "loginButton":"LOG IN",
-        "dontHaveAccount":"Don't have an account",
-        "sinup":"Sinup"
+        "pleaseLogin": "Please login to continue using our App",
+        "emailPlaceHolder": "Enter your email address",
+        "requiredMessage": "This is required",
+        "passwordPlaceholder": "Enter your password",
+        "forgotPassword": "Forgot Password",
+        "loginButton": "LOG IN",
+        "dontHaveAccount": "Don't have an account",
+        "sinup": "Sinup"
     },
-    "SignUpScreen":{
-        "signup":"Sign Up",
-        "namePlaceholder":"enter your first name",
-        "secondName":"enter your last name",
-        "emailPlaceholder":"enter your email",
-        "passwordPlaceholder":"enter your password",
-        "signupButton":"SIGN UP",
-        "loginInstead":"Login instead"
+    "SignUpScreen": {
+        "signup": "Sign Up",
+        "namePlaceholder": "enter your first name",
+        "secondName": "enter your last name",
+        "emailPlaceholder": "enter your email",
+        "passwordPlaceholder": "enter your password",
+        "signupButton": "SIGN UP",
+        "loginInstead": "Login instead",
+        "requiredMessage": "This is required"
     },
-    "ForgotScreen":{
-        "forgot":"Forgot Password",
-        "enterEmail":"enter your email",
-        "submitButton":"SUBMIT",
-        "loginInstead":"Login instead"
+    "ForgotScreen": {
+        "forgot": "Forgot Password",
+        "enterEmail": "enter your email",
+        "submitButton": "SUBMIT",
+        "loginInstead": "Login instead",
+        "requiredMessage": "This is required"
+    },
+    "ExploreScreen": {
+        "tagline": "Let's find out something new...",
+        "trending": "trending",
+        "newReleases": "New Releases",
+        "selectedForYou": "Selected For You",
+        "hi": "Hi"
+    },
+    "FavScreen": {
+        "MyFav": "My Favourites",
+        "end": "You reached to the end"
+    },
+    "MenuScreen": {
+        "preference": "Preference",
+        "account": "Account",
+        "setting": "Setting",
+        "genre": "Genres Preference",
+        "logout":"Logout"
+
+    },
+    "DrawerScreen":{
+        "explore":"Explore",
+        "myFav":"MyFav",
+        "menu":"Menu"
+    },
+    "SearchBar":{
+        "search":"Search Here"  
     }
 }

@@ -19,7 +19,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup"
 import { initReactI18next, useTranslation } from "react-i18next";
 import Icon from "react-native-vector-icons/Ionicons";
-import ch from '../../config/Languages/ch.json'
 
 
 type loginScreenProp = NativeStackNavigationProp<DrawerNavigationParams, 'Login'>;

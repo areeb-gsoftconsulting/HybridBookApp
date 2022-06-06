@@ -10,16 +10,20 @@ import {
     Image
 } from 'react-native';
 import SearchBar from '../../components/SearchBar';
+import { initReactI18next, useTranslation } from "react-i18next";
+
 
 
 const MyFav = () => {
     const styles = useStyles()
+    const [t, i18n] = useTranslation()
+
     return (
         <ScrollView>
             <View style={styles.container}>
                 <SearchBar />
                 <View style={styles.header}>
-                    <Text style={styles.heading}>My Favourites</Text>
+                    <Text style={styles.heading}>{t('FavScreen.MyFav')}</Text>
                 </View>
                 <View style={styles.booksShop}>
                     <View style={styles.booksContainer}>
@@ -51,7 +55,7 @@ const MyFav = () => {
                     </View>
                 </View>
 
-                <Text style={[{ textAlign: 'center', padding: 50 },styles.regularText]}>You reached to the end</Text>
+                <Text style={[{ textAlign: 'center', padding: 50 },styles.regularText]}>{t('FavScreen.end')}</Text>
             </View>
         </ScrollView>
     );

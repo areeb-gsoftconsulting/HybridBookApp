@@ -13,6 +13,8 @@ import {
 } from '@react-navigation/drawer';
 import { useTheme } from 'react-native-paper';
 import ThemeToggle from '../components/ThemeToggle';
+import Lang from '../components/langToggle';
+import { initReactI18next, useTranslation } from "react-i18next";
 
 
 
@@ -22,6 +24,7 @@ function CustomDrawerContent(props: any) {
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <ThemeToggle />
+      <Lang />
     </DrawerContentScrollView>
   );
 }
@@ -30,6 +33,8 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
   const { colors } = useTheme()
+  const [t, i18n] = useTranslation()
+
   return (
     <Drawer.Navigator
       screenOptions={{
@@ -51,7 +56,7 @@ const DrawerNavigation = () => {
 
       drawerContent={(props) => <CustomDrawerContent {...props} />} >
 
-      <Drawer.Screen name="Explore" component={Navigation} options={{
+      <Drawer.Screen name={t('DrawerScreen.explore')} component={Navigation} options={{
         drawerIcon: (({ color, size }) => {
           return (
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -61,7 +66,7 @@ const DrawerNavigation = () => {
         })
       }} />
 
-      <Drawer.Screen name="MyFav" component={MyFav} options={{
+      <Drawer.Screen name={t('DrawerScreen.myFav')} component={MyFav} options={{
         drawerIcon: (({ color, size }) => {
           return (
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -71,7 +76,7 @@ const DrawerNavigation = () => {
         })
       }} />
 
-      <Drawer.Screen name="Menu" component={Menu} options={{
+      <Drawer.Screen name={t('DrawerScreen.menu')} component={Menu} options={{
         drawerIcon: (({ color, size }) => {
           return (
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>

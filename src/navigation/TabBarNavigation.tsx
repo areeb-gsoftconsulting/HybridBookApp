@@ -8,6 +8,7 @@ import IconExplore from 'react-native-vector-icons/FontAwesome'
 import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import IconEntypo from 'react-native-vector-icons/Entypo'
 import Menu from "../screens/Menu";
+import { initReactI18next, useTranslation } from "react-i18next";
 
 const Tab = createBottomTabNavigator<MainBottomTabParamList>();
 
@@ -16,6 +17,8 @@ import { useTheme } from "react-native-paper";
 const Navigation = () => {
 
     const { colors } = useTheme()
+  const [t, i18n] = useTranslation()
+
 
     return (
         <Tab.Navigator
@@ -47,7 +50,7 @@ const Navigation = () => {
                         return (
                             <View style={{ flexDirection: 'row', backgroundColor: colors.bottomBadge, padding: 10, paddingLeft: 30, paddingRight: 15, borderRadius: 50 }}>
                                 <IconExplore name="search" color={color} size={size} />
-                                <Text>Explore</Text>
+                                <Text>{t('DrawerScreen.explore')}</Text>
                             </View>
                         )
                     }
@@ -61,7 +64,7 @@ const Navigation = () => {
                         return (
                             <View style={{ flexDirection: 'row', backgroundColor: colors.bottomBadge, padding: 10, paddingLeft: 30, paddingRight: 15, borderRadius: 50 }}>
                                 <IconMaterialIcons name="favorite-border" color={color} size={size} />
-                                <Text>Favorite</Text>
+                                <Text>{t('DrawerScreen.myFav')}</Text>
                             </View>
                         )
                     }
@@ -76,7 +79,7 @@ const Navigation = () => {
                         return (
                             <View style={{ flexDirection: 'row', backgroundColor: colors.bottomBadge, padding: 10, paddingLeft: 30, paddingRight: 15, borderRadius: 50 }}>
                                 <IconEntypo name="menu" color={color} size={size} />
-                                <Text>Menu</Text>
+                                <Text>{t('DrawerScreen.menu')}</Text>
                             </View>
                         )
                     }

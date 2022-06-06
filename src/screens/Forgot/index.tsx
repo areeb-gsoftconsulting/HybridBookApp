@@ -10,6 +10,8 @@ import { useForm, Controller } from "react-hook-form";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { DrawerNavigationParams } from '../../navigation/DrawerNavigationParams';
 import { useNavigation } from '@react-navigation/native';
+import { initReactI18next, useTranslation } from "react-i18next";
+
 
 type forgotScreenProp = NativeStackNavigationProp<DrawerNavigationParams, 'Forgot'>;
 
@@ -18,6 +20,7 @@ type forgotScreenProp = NativeStackNavigationProp<DrawerNavigationParams, 'Forgo
 const Forgot = () => {
     const styles = useStyles()
     const navigation = useNavigation<forgotScreenProp>();
+    const [t, i18n] = useTranslation()
 
     const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -32,7 +35,7 @@ const Forgot = () => {
 
             </View>
             <View style={styles.login}>
-                <Text style={styles.loginHeading}>Forgot Password</Text>
+                <Text style={styles.loginHeading}>{t('ForgotScreen.forgot')}</Text>
                 <Controller
                     control={control}
                     rules={{
@@ -41,7 +44,7 @@ const Forgot = () => {
                     render={({ field: { onChange, onBlur, value } }) => (
                         <TextInput
                             style={styles.txtInput}
-                            placeholder='enter your email'
+                            placeholder={t('ForgotScreen.enterEmail')}
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
@@ -49,16 +52,16 @@ const Forgot = () => {
                     )}
                     name="email"
                 />
-                {errors.email && <Text>This is required.</Text>}
+                {errors.email && <Text>{t('ForgotScreen.requiredMessage')}</Text>}
 
                 <TouchableOpacity onPress={handleSubmit(onSubmit)}>
                     <Text style={styles.loginBtn}>
-                        SUBMIT
+                        {t('ForgotScreen.submitButton')}
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                    <Text onPress={()=>{navigation.navigate('Login')}} style={styles.regulartxt}>
-                        Login instead
+                    <Text onPress={() => { navigation.navigate('Login') }} style={styles.regulartxt}>
+                        {t('ForgotScreen.loginInstead')}
                     </Text>
                 </TouchableOpacity>
             </View>

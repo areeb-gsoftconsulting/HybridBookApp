@@ -30,5 +30,31 @@
         "enterEmail":"输入你的电子邮箱",
         "submitButton":"提交",
         "loginInstead":"改为登录"
+    },
+    "ExploreScreen":{
+        "tagline":"让我们发现一些新的东西......",
+        "trending":"趋势",
+        "newReleases":"新版本",
+        "selectedForYou":"为您选择",
+        "hi":"你好"
+    },
+    "FavScreen": {
+        "MyFav": "我的最爱",
+        "end": "你走到了尽头"
+    },
+    "MenuScreen": {
+        "preference": "偏爱",
+        "account": "帐户",
+        "setting": "环境",
+        "genre": "流派偏好",
+        "logout":"登出"
+    },
+    "DrawerScreen":{
+        "explore":"探索",
+        "myFav":"我的最爱",
+        "menu":"菜单"
+    },
+    "SearchBar":{
+        "search":"在这里搜索"  
     }
 }

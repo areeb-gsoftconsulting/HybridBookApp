@@ -11,6 +11,8 @@ import { useForm, Controller } from "react-hook-form";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { DrawerNavigationParams } from '../../navigation/DrawerNavigationParams';
 import { useNavigation } from '@react-navigation/native';
+import { initReactI18next, useTranslation } from "react-i18next";
+
 
 
 type sinupScreenProp = NativeStackNavigationProp<DrawerNavigationParams, 'Login'>;
@@ -21,6 +23,8 @@ type sinupScreenProp = NativeStackNavigationProp<DrawerNavigationParams, 'Login'
 const Sinup = () => {
     const styles = useStyles()
     const navigation = useNavigation<sinupScreenProp>();
+    const [t, i18n] = useTranslation()
+
 
     const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -37,7 +41,7 @@ const Sinup = () => {
             <View style={styles.header}>
             </View>
             <View style={styles.login}>
-                <Text style={styles.loginHeading}>Sign Up</Text>
+                <Text style={styles.loginHeading}>{t('SignUpScreen.sinup')}</Text>
                 <Controller
                     control={control}
                     rules={{
@@ -46,7 +50,7 @@ const Sinup = () => {
                     render={({ field: { onChange, onBlur, value } }) => (
                         <TextInput
                             style={styles.txtInput}
-                            placeholder='enter your first name'
+                            placeholder={t('SignUpScreen.namePlaceholder')}
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
@@ -64,7 +68,7 @@ const Sinup = () => {
                     render={({ field: { onChange, onBlur, value } }) => (
                         <TextInput
                             style={styles.txtInput}
-                            placeholder='enter your Last Name'
+                            placeholder={t('SignUpScreen.secondName')}
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
@@ -72,7 +76,7 @@ const Sinup = () => {
                     )}
                     name="lastName"
                 />
-                {errors.lastName && <Text>This is required.</Text>}
+                {errors.lastName && <Text>{t('SignUpScreen.requiredMessage')}</Text>}
 
                 <Controller
                     control={control}
@@ -82,7 +86,7 @@ const Sinup = () => {
                     render={({ field: { onChange, onBlur, value } }) => (
                         <TextInput
                             style={styles.txtInput}
-                            placeholder='enter your Email'
+                            placeholder={t('SignUpScreen.emailPlaceholder')}
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
@@ -90,7 +94,7 @@ const Sinup = () => {
                     )}
                     name="email"
                 />
-                {errors.email && <Text>This is required.</Text>}
+                {errors.email && <Text>{t('SignUpScreen.requiredMessage')}</Text>}
 
                 <Controller
                     control={control}
@@ -100,7 +104,7 @@ const Sinup = () => {
                     render={({ field: { onChange, onBlur, value } }) => (
                         <TextInput
                             style={styles.txtInput}
-                            placeholder='enter your Password'
+                            placeholder={t('SignUpScreen.passwordPlaceholder')}
                             onBlur={onBlur}
                             onChangeText={onChange}
                             value={value}
@@ -108,17 +112,17 @@ const Sinup = () => {
                     )}
                     name="password"
                 />
-                {errors.password && <Text>This is required.</Text>}
+                {errors.password && <Text>{t('SignUpScreen.requiredMessage')}</Text>}
 
 
                 <TouchableOpacity>
                     <Text style={styles.loginBtn} onPress={handleSubmit(onSubmit)}>
-                        SIGN UP
+                        {t('SignUpScreen.signupButton')}
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
+                <TouchableOpacity onPress={() => { navigation.navigate('Login') }}>
                     <Text style={styles.regulartxt}>
-                        Login instead
+                    {t('SignUpScreen.loginInstead')}
                     </Text>
                 </TouchableOpacity>
             </View>

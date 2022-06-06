@@ -18,7 +18,6 @@ export const loginSlice = createSlice({
   reducers: {
     loginFlag: (state, action: PayloadAction<any>) => {
       state.isLoggedIn = action.payload
-      console.log(state.isLoggedIn,"here")  
     },
     
   },
