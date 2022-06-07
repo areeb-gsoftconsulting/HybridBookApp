@@ -73,6 +73,10 @@ export const useStyles = () => {
             marginRight:20,
             marginBottom:15
         },
+        googleBtn:{
+            alignSelf:'center',
+            width:'80%'
+        }
         
 
         
