@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useStyles} from './styles';
+import {Settings} from 'react-native-fbsdk-next';
+import {LoginButton, AccessToken} from 'react-native-fbsdk-next';
+import {Profile} from 'react-native-fbsdk-next';
 import {
   Text,
   TextInput,
@@ -46,6 +49,9 @@ const Login = () => {
   const [t, i18n] = useTranslation();
   const [user, setUser] = useState<any>('');
 
+  Settings.setAppID('1428637430893006');
+  Settings.initializeSDK();
+
   useEffect(() => {
     GoogleSignin.configure({
       iosClientId:
@@ -64,7 +70,7 @@ const Login = () => {
       const userInfo = await GoogleSignin.signIn();
       setUser(userInfo);
       if (user !== '') {
-        moveNextScreen()
+        moveNextScreen();
       }
     } catch (error) {
       if (error === statusCodes.SIGN_IN_CANCELLED) {
@@ -117,10 +123,10 @@ const Login = () => {
 
   ///////////////////////////////////////
 
-  const moveNextScreen =()=>{
-      dispatch(loginFlag(true));
-      navigation.navigate('DrawerNavigation');
-  }
+  const moveNextScreen = () => {
+    dispatch(loginFlag(true));
+    navigation.navigate('DrawerNavigation');
+  };
 
   const {
     control,
@@ -131,7 +137,7 @@ const Login = () => {
   });
   const onSubmit = (data: any) => {
     if (data.email == 'admin@gmail.com' && data.password == '1234') {
-      moveNextScreen()
+      moveNextScreen();
     } else {
       Alert.alert('Email/Password Wrong');
     }
@@ -210,6 +216,30 @@ const Login = () => {
           onPress={signIn}
         />
 
+        <LoginButton
+          style={styles.fbLoginBtn}
+          onLoginFinished={(error, result) => {
+            if (error) {
+              console.log('login has error: ' + error);
+            } else if (result.isCancelled) {
+              console.log('login is cancelled.');
+            } else {
+              AccessToken.getCurrentAccessToken()
+                .then(data => {
+                  console.log(data);
+                  moveNextScreen();
+                })
+                .catch(err => {
+                  console.log(
+                    '🚀 ~ file: index.tsx ~ line 239 ~ AccessToken.getCurrentAccessToken ~ err',
+                    err,
+                  );
+                });
+            }
+          }}
+          onLogoutFinished={() => console.log('logout.')}
+        />
+
         <TouchableOpacity>
           <Icon
             style={styles.forgot}
@@ -220,6 +250,7 @@ const Login = () => {
             name="language"
           />
         </TouchableOpacity>
+        
       </View>
     </View>
   );

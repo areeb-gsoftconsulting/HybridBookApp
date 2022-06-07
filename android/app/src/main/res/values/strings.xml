@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BookApp</string>
     <string name="server_client_id">420464399494-3m834p6ttfah4flm56k182mahhfjd9tn.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1428637430893006</string>
+    <string name="facebook_client_token">a43a8256156aec0e65b2781a3375bf32</string>
+
 </resources>
