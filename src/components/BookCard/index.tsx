@@ -15,9 +15,6 @@ import { useNavigation } from '@react-navigation/native';
 
 type BookCard = NativeStackNavigationProp<DrawerNavigationParams, 'BookCard'>;
 
-
-
-
 const BookCard = () => {
     const [books, setBooks] = useState<any>(booksJson)
 
@@ -25,7 +22,6 @@ const BookCard = () => {
 
     const styles = useStyles()
     return (
-
         <ScrollView horizontal={true}>
             {books.map((obj: any, i: number) => {
 
@@ -40,12 +36,7 @@ const BookCard = () => {
                 )
             })}
         </ScrollView>
-
-
-
     );
 };
-
-
 
 export default BookCard;

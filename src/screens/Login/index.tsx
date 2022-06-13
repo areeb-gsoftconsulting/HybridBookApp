@@ -250,7 +250,6 @@ const Login = () => {
             name="language"
           />
         </TouchableOpacity>
-        
       </View>
     </View>
   );

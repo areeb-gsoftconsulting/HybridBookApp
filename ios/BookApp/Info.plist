@@ -81,5 +81,28 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-</dict>
+<!-- for fb sign in -->
+	<key>CFBundleURLTypes</key>
+	<array>
+	<dict>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>1428637430893006</string>
+	</array>
+	</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1428637430893006</string>
+	<key>FacebookClientToken</key>
+	<string>a43a8256156aec0e65b2781a3375bf32</string>
+	<key>FacebookDisplayName</key>
+	<string>Gsoft-App</string>
+
+	<!-- this one in the last -->
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		</array>
+	</dict>
 </plist>

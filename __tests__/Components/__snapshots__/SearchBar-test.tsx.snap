@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component testing Snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "backgroundColor": undefined,
+      "borderColor": "grey",
+      "borderRadius": 50,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginBottom": 20,
+      "padding": 5,
+      "width": "90%",
+    }
+  }
+>
+  <TextInput
+    placeholder="SearchBar.search"
+    style={
+      Object {
+        "color": "#6200ee",
+        "margin": 2,
+        "marginLeft": 5,
+        "width": undefined,
+      }
+    }
+    testID="searchInput"
+  />
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="searchBookies"
+  >
+    <mockedDefaultExport
+      name="search"
+      size={25}
+      style={
+        Object {
+          "color": "#6200ee",
+          "marginRight": 15,
+        }
+      }
+    />
+  </View>
+</View>
+`;

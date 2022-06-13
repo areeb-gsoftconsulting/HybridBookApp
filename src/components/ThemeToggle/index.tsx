@@ -11,14 +11,16 @@ const ThemeToggle =()=>{
 
     const dispatch = useDispatch()
 
-    return(
-        <View>
-            <Switch
-            value={currentTheme}
-            onValueChange={()=>{dispatch(getTheme(!currentTheme))}}
-            />
-        </View>
-    )
+    return (
+      <View>
+        <Switch
+          value={currentTheme}
+          onValueChange={() => {
+            dispatch(getTheme(!currentTheme));
+          }}
+        />
+      </View>
+    );
 }
 
 export default ThemeToggle

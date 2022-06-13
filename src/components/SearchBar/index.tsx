@@ -16,17 +16,16 @@ const SearchBar = () => {
     const [t, i18n] = useTranslation()
 
     return (
-        <View style={styles.searchView}>
-            <TextInput
-                placeholder={t('SearchBar.search')}
-                style={styles.searchViewInput}
-            />
-            <TouchableOpacity >
-                <Icon name="search" size={25} style={styles.searchViewChildren} />
-            </TouchableOpacity>
-        </View>
-
-
+      <View style={styles.searchView}>
+        <TextInput
+          testID="searchInput"
+          placeholder={t('SearchBar.search')}
+          style={styles.searchViewInput}
+        />
+        <TouchableOpacity testID={'searchBookies'}>
+          <Icon name="search" size={25} style={styles.searchViewChildren} />
+        </TouchableOpacity>
+      </View>
     );
 };
 
